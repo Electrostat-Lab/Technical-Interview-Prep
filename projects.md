@@ -60,10 +60,12 @@ This document illustrates component-based and detailed design models for my proj
 6) Concretized Components in deployment (i.e., deployment design in-action):
    1) Terminal Device Component.
    2) Peripheral Device Component.
-   3) Data Packet Component.
+   3) Data Processing Component.
    4) Data Encoding Component.
    5) Data Decoding Component.
    6) Data Encryption Component.
    7) Data Decryption Component.
    8) Data Processing Failure Detector.
    9) Data Processing Failure Recovery.
+
+7) Component-based diagram deriving relations:
