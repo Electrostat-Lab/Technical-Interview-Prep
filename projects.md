@@ -51,8 +51,8 @@ This document illustrates component-based and detailed design models for my proj
     8) Handle different Human-Interface Devices vendors.
 
 5) Preliminary Component-based design:
-  1) _Terminal Device Component_: a physical component that runs the whole simulation.
-  2) _Peripheral Device Component_: a physical component that provides the hardware to control the simulation.
-  3) _Data Packet Component_: a virtual component that carries the communicant piece of information that controls the simulation.
-  4) _Data Filter Component_: a virtual component that provides extra tweaks and constraints to the _data packet components_ in the form of **pre-processing** or **post-processing data filters**.
-  5) _Comm Interface_: an interface specialized to provide an on-wire or wireless communication link between two or more component devices.
+   1) _Terminal Device Component_: a physical component that runs the whole simulation.
+   2) _Peripheral Device Component_: a physical component that provides the hardware to control the simulation.
+   3) _Data Packet Component_: a virtual component that carries the communicant piece of information that controls the simulation.
+   4) _Data Filter Component_: a virtual component that provides extra tweaks and constraints to the _data packet components_ in the form of **pre-processing** or **post-processing data filters**.
+   5) _Comm Interface_: an interface specialized to provide an on-wire or wireless communication link between two or more component devices.
