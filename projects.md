@@ -31,4 +31,8 @@ This document illustrates component-based and detailed design models for my proj
 > 2) Data framing and buffering routines.
 > 3) Anti-failure handlers.
 > 4) Closing connection.
-> 
+>
+
+3) Problem-problem relationship: There are relations among problem components; both uni-directional and bi-directional relations can exist so far. For example, a relation among MCU firmware, communication protocol, and software design could be derivated.
+
+4)
