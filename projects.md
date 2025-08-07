@@ -69,3 +69,15 @@ This document illustrates component-based and detailed design models for my proj
    9) Data Processing Failure Recovery.
 
 7) Component-based diagram deriving relations:
+
+![component-based-diagram](https://github.com/user-attachments/assets/bea0e265-cfa7-436a-8997-69da5a0e8c04)
+
+A component-based diagram attains the functional and non-functional requirements for the system. This is a component-based diagram that is based on the **Pipe and Filter Architectural Pattern**.
+
+8) Detailed-design automata-based diagram:
+
+An automata-based diagram is a mathematical model that attains a scientific model for the processes involved in the form of sequential algorithms.
+
+9) Constructional-design paradigms. 
+
+Object-oriented based class diagrams, and structured-based diagrams for code to be implemented.
