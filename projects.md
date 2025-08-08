@@ -15,8 +15,8 @@ This document illustrates component-based and detailed design models for my proj
 * Technology Stack and target projects.
 
 ## Serial4j Model:
-1) Problem synthesis and definition: controlling graphics and physics simulation via an external hardware, or interfacing existing hardware with a simulation software.
-2) Problem decomposition: We could subdivide this larger problem into much smaller subsets of problems, in the essence to start deriving simple solutions. Controlling software simulation has various aspects that need to be demystified; **first and foremost** the hardware-software communication protocol compatibility aspect; **second to that** is the hardware design and software design problems. 
+### 1) Problem synthesis and definition: controlling graphics and physics simulation via an external hardware, or interfacing existing hardware with a simulation software.
+### 2) Problem decomposition: We could subdivide this larger problem into much smaller subsets of problems, in the essence to start deriving simple solutions. Controlling software simulation has various aspects that need to be demystified; **first and foremost** the hardware-software communication protocol compatibility aspect; **second to that** is the hardware design and software design problems. 
 
 > [!NOTE]
 > ## Hardware design problems (both functional and non-functional) including:
@@ -33,9 +33,9 @@ This document illustrates component-based and detailed design models for my proj
 > 4) Closing connection.
 >
 
-3) Problem-problem relationship: There are relations among problem components; both uni-directional and bi-directional relations can exist so far. For example, a relation among MCU firmware, communication protocol, and software design could be derivated.
+### 3) Problem-problem relationship: There are relations among problem components; both uni-directional and bi-directional relations can exist so far. For example, a relation among MCU firmware, communication protocol, and software design could be derivated.
 
-4) Software Requirements:
+### 4) Software Requirements:
   * **Functional requirements:**
     1) Open an IO pipe between the simulator terminal and the peripheral devices.
     2) Write an embedded bare-metal software on the peripheral devices to communicate data in R/W capabilities.
@@ -50,14 +50,14 @@ This document illustrates component-based and detailed design models for my proj
     7) Handle failure of sending, receiving, or processing data packets on both sides of operation.
     8) Handle different Human-Interface Devices vendors.
 
-5) Preliminary Components derivation:
+### 5) Preliminary Components derivation:
    1) _Terminal Device Component_: a physical component that runs the whole simulation.
    2) _Peripheral Device Component_: a physical component that provides the hardware to control the simulation.
    3) _Data Packet Component_: a virtual component that carries the communicant piece of information that controls the simulation.
    4) _Data Processing Component_: a virtual component that provides extra tweaks and constraints to the _data packet components_ in the form of **pre-processing** or **post-processing data filters**.
    5) _Comm Interface_: an interface specialized to provide an on-wire or wireless communication link between two or more component devices.
 
-6) Concretized Components in deployment (i.e., deployment design in-action):
+### 6) Concretized Components in deployment (i.e., deployment design in-action):
    1) Terminal Device Component.
    2) Peripheral Device Component.
    3) Data Processing Component.
@@ -68,16 +68,20 @@ This document illustrates component-based and detailed design models for my proj
    8) Data Processing Failure Detector.
    9) Data Processing Failure Recovery.
 
-7) Component-based diagram deriving relations:
+### 7) Component-based diagram deriving relations:
 
 ![component-based-diagram](https://github.com/user-attachments/assets/bea0e265-cfa7-436a-8997-69da5a0e8c04)
 
 A component-based diagram attains the functional and non-functional requirements for the system. This is a component-based diagram that is based on the **Pipe and Filter Architectural Pattern**.
 
-8) Detailed-design automata-based diagram:
+### 8) Detailed-design automata-based diagram:
+* **Concludes 3 specifications:**
+ 1) Peripheral Device Hardware Specification.
+ 2) Terminal Device Hardware Specification.
+ 3) Simulation Software Specification.
 
-An automata-based diagram is a mathematical model that attains a scientific model for the processes involved in the form of sequential algorithms.
+* Each specification shows the **structure**, **behavior**, and **examples for the implementation algorithms**.
 
-9) Constructional-design paradigms. 
+### 10) Constructional-design paradigms. 
 
 Object-oriented based class diagrams, and structured-based diagrams for code to be implemented.
